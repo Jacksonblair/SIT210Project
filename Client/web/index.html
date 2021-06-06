@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="/eel.js"></script>
+	<script type="text/javascript" src="/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<title>Eel App</title>
+</head>
+<body>
+
+	<!-- Connection Interface -->
+	<!-- 
+		Components:
+			- Status of connection (connecting, searching, none available, etc)
+			- List of services
+				- Service + connect button
+			- Find services button
+			- Pair device button
+	 -->
+
+	<div id="connection-interface">
+		
+			<div id="connection-status" class="window">
+				<div id="connection-status-message"></div>
+				<button id="connection-status-action-button"></button>
+				<button onclick="hideConnectionInterface()" id="connection-status-exit-button">
+					Exit
+				</button>
+<!-- 				<button onclick="waitForPair()" id="connection-status-pair-button">
+					Pair
+				</button> -->
+				<button onclick="clickedDefault()" id="connection-status-set-default-button">
+					Default
+				</button> 
+				<button onclick="connectToDefault()" id="connection-status-connect-default-button">
+					Connect to Default
+				</button> 
+			</div>
+
+			<div id="notifier" class="window">
+				<div id="notifier-message"></div>
+				<button id="notifier-button">OK</button>
+			</div>
+
+<!-- 			<div id="pair-request" class="window">
+				<div id="pair-request-message"> Waiting for pair... </div>
+				<button onclick="stopWaitingForPair()" id="pair-request-cancel-button"> 
+					Cancel 
+				</button>
+			</div> -->
+
+			<div id="services-list" class="window">
+				<div id="services-list-services">
+					<!-- Generate indiv. service buttons in script -->
+				</div>
+				<button id="services-list-exit-button" onclick="showConnectionStatus()">
+					Exit
+				</button>
+			</div>
+
+			<div id="service-information" class="window">
+				<div id="service-information-service-name"></div>
+				<div id="service-information-mac-address"></div>
+				<div id="service-information-service-id"></div>
+<!-- 				<div id="service-information-paired-status">
+					Paired
+				</div> -->
+				<button id="service-information-connect-button">
+					Connect
+				</button>
+				<button id="service-information-exit-button">
+					Exit
+				</button>
+			</div>
+
+	</div>
+	
+	<div id="main-interface">
+		<button class="connection-interface-button" onclick="showConnectionInterface()"> Connection </button>
+		<button class="btn btn-1" onclick="pressedButton(1, this)"> 1 </button>
+		<button class="btn btn-2" onclick="pressedButton(2, this)"> 2 </button>
+		<button class="btn btn-3" onclick="pressedButton(3, this)"> 3 </button>
+		<button class="btn btn-4 " onclick="pressedButton(4, this)"> 4 </button>
+		<button class="btn btn-5" onclick="pressedButton(5, this)"> 5 </button>
+	</div>
+
+
+</body>
+</html>

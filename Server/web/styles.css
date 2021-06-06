@@ -1,0 +1,67 @@
+body {
+	height:  100vh;
+	margin: 0px;
+	font-size: 30px;
+}
+
+button {
+	font-size: 20px;
+	margin: 5px;
+}
+
+#main-interface {
+	height:  100%;
+	width:  100%;
+	display: flex;
+	justify-content: center;	
+	align-items: center;
+}
+
+#connection-status {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#all-bindings {
+	text-align: center;
+}
+
+#all-bindings-container {
+	display: flex;
+	flex-direction: column;
+}
+
+#binding {
+	text-align: center;
+}
+
+.binding {
+	background: white;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+#connection-status-disconnect-button {
+	display: none;
+}
+
+#connection-status-disconnect-button.hide {
+	display: none;
+}
+
+#connection-status-disconnect-button.show {
+	display: flex;
+}
+
+
+.combination {
+	border:  1px solid red;
+	padding: 10px 20px;
+	color:  red;
+	min-height: 40px;
+	border-radius: 5px;
+	display: flex;	
+	justify-content: center;
+	align-items: center;
+}

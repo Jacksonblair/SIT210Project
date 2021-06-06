@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> HELLO </title>
+	<script type="text/javascript" src="/eel.js"></script>
+	<script type="text/javascript" src="./index.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div id="main-interface">
+
+		<div id="connection-status">
+			<div id="connection-status-message"> No Connection </div>
+			<button onclick="disconnect()" id="connection-status-disconnect-button"> Disconnect </button>
+			<button onclick="showBindings()" id="connection-status-edit-bindings-button"> Edit bindings </button>
+<!-- 			<button onclick="connectToPeripheral()"> Pair with peripheral </button> -->
+		</div>
+
+		<div id="all-bindings">
+			<!--  -->
+			<div id="all-bindings-container"></div>
+			<button id="all-bindings-back-button" onclick="showConnectionStatus()">Back</button>		
+		</div>
+
+		<div id="binding">
+			<!--  -->
+			<div id="binding-message"></div>
+			<div id="binding-input"></div>		
+			<button type="button" onclick="saveBinding()" id="binding-save-button">Save</button>		
+			<button onclick="exitBinding()" id="binding-exit-button">Exit</button>		
+		</div>		
+
+		<div id="pairing">
+<!-- 			<div id="pairing-message">Trying to pair peripheral...</div> -->
+		</div>
+
+	</div>
+</body>
+</html>

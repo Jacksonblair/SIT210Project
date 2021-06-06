@@ -1,0 +1,167 @@
+body {
+    width: 800px;
+    margin: 0px;
+    display: flex;
+    border:  1px solid grey;
+    box-sizing: border-box;
+}
+
+.pressed {
+    animation: pressedAnim 0.3s linear;
+}
+
+@keyframes pressedAnim {
+    0% {
+        background: darkgrey;
+    }
+    100% {
+        background: lightgrey;
+    }
+}
+
+.btn {
+    background: lightgrey;
+    outline: none;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    width: 22%;
+    height: 175px;
+    border-radius: 100%;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    font-weight: bold;
+    box-shadow: 4px 4px 0px 0px #00000017;
+}
+
+.btn:hover {
+
+}
+
+.btn-1 {
+    left: 5%;
+    top: 10%;
+}
+
+.btn-2 {
+    left: 37.5%;
+    top:  10%;
+}
+
+.btn-3 {
+    left: 70%;
+    top:  10%;
+}
+
+.btn-4 {
+    left:  21%;
+    bottom:  10%;
+}
+
+.btn-5 {
+    right: 21%;
+    bottom:  10%;
+}
+
+.connection-interface-button {
+    position: absolute;
+    font-weight: bold;
+    border: 1px solid grey;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+#main-interface {
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+}
+#connection-interface {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background: #00000085;
+    overflow:  hidden;
+    left: 0px;
+    top: 0px;
+}
+
+#connection-interface.hide {
+    display: none;
+}
+
+#connection-interface.show {
+    display: flex;
+}
+
+
+#notifier-button {
+    display: none;
+}
+#notifier-button.hide {
+    display: none;
+}
+#notifier-button.show {
+    display: flex;
+}
+
+
+#connection-status-set-default-button {
+    display: none;
+}
+#connection-status-set-default-button.hide {
+    display: none;
+}
+#connection-status-set-default-button.show {
+    display: flex;
+}
+
+
+#connection-interface .window {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: lightgrey;
+    border: 2px solid white;
+    border-radius: 25px;
+    box-shadow:  0px 0px 4px 1px #00000069;
+}
+
+#connection-interface {
+    font-size: 40px;
+}
+
+#connection-interface button {
+    padding: 10px;
+    margin: 5px;  
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+#connection-status {
+
+}
+
+#connection-status-message {
+    text-align: center;
+}
+
+
+#connection-status-connect-default-button.hide {
+    display: none;
+}
+#connection-status-connect-default-button {
+    display: none;
+}
+#connection-status-connect-default-button.show {
+    display: flex;
+}
